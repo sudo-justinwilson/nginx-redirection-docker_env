@@ -1,0 +1,17 @@
+server {
+        listen 80;
+        #listen 443 ssl;
+        #listen [::]:80;
+
+        #server_name careers.melbourneit.com.au;
+        server_name test1.aws.sudo-justin-wilson.com
+        rewrite (/company)(/)*$ $scheme://arq.group/who-we-are;
+        #return 301 $scheme://arq.group$request_uri;
+        #return 301 $scheme://arq.group/;
+
+        #root /var/www/example.com;
+        #index index.html;
+
+        #location / {
+        #       try_files $uri $uri/ =404;
+        }
