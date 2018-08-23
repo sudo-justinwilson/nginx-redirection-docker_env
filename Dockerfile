@@ -13,8 +13,8 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/
 
 # add git so we can download nginx config:
 RUN apk add git
-#RUN mkdir -v /data && git clone https://github.com/sudo-justinwilson/nginx-config.git /data
-#RUN cp -v /data/conf.d/* /etc/nginx/conf.d/
+RUN mkdir -v /data && git clone https://github.com/sudo-justinwilson/nginx-config.git /data
+RUN cp -v /data/conf.d/* /etc/nginx/conf.d/
 
 EXPOSE 80 443
 
