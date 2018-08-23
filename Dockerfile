@@ -9,7 +9,7 @@ EXPOSE 80 443
 RUN apk update && apk upgrade
 
 # send logs to stdout so they can be seen with docker lgos:
-RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
+#RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
 
 # add git so we can download nginx config:
 RUN apk add git
