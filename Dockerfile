@@ -18,4 +18,4 @@ RUN cp -v /data/conf.d/* /etc/nginx/conf.d/
 
 EXPOSE 80 443
 
-CMD ["nginx", "-g", "daemon off; error_log stderr info;"]
+CMD ["/usr/sbin/nginx", "-g", "daemon off; error_log stderr info;"]
